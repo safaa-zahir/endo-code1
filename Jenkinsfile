@@ -12,8 +12,7 @@ pipeline{
             }
          stage('test'){
             steps{
-                sh '''
-                 docker rmi -f `docker images -q `                 
+                sh '''                 
                  docker-compose build               
                  docker-compose up -d 
                 '''
