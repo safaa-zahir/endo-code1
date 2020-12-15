@@ -4,8 +4,8 @@ RUN mkdir /code
 WORKDIR /code
 COPY ./ /code/
 RUN apt-get update -y && \
-    apt-get install python3-venv \
-                   python3-pip
+    apt-get install -y python3-venv \
+                    python3-pip
 # Installing Django and Django Rest Framework
  RUN pip3 install django \
                  djangorestframework
