@@ -1,0 +1,2 @@
+pipeline {
+    agent { dockerfile true }}
