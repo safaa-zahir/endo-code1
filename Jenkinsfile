@@ -1,5 +1,8 @@
-pipeline {
-    agent { dockerfile true }
+pipeline{
+    agent{
+        label 'master'
+    }
+
  stages {
         stage('Test') {
             steps {
