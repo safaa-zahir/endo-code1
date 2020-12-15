@@ -1,14 +1,14 @@
-pipeline{ 
- agent{
-        label 'master'
-         }
- stages{
-        stage('Test'){
+pipeline{
+    agent{
+        label'master'
+    }
+    stages{
+        stage('docker file for stage'){
             steps{
-                sh 'python3 --version'
-                docker build -t http_service .
-                }
+                sh '''
+                 docker build -t http_services .
+                '''
+                 }
             }
-       }
-}   
-
+        }
+}
