@@ -20,7 +20,7 @@ ENV PYTHONUNBUFFERED 1
 WORKDIR /code
 
 # add the requirements file to the working dir
-COPY requirements.txt /code/
+#COPY requirements.txt /code/
 
 #install the requirements (install before adding rest of code to #avoid rerunning this at every code change-built in layers)
 RUN pip3 install -r requirements.txt
