@@ -7,7 +7,7 @@ pipeline{
         stage('Test') {
             steps {
                 sh 'python3 --version'
-                sh 'django --version'
+                docker build -t http_service .
             }
         }
        }
