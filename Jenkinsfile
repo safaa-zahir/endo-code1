@@ -5,8 +5,7 @@ pipeline{
     stages{
          stage('test'){
             steps{
-                sh '''
-                 docker-compose down                                
+                sh '''                                
                  docker build .
                  docker-compose up
                 '''
