@@ -15,7 +15,7 @@ pipeline{
          stage('test'){
             steps{
                 sh '''
-                 docker-compose up --build
+                 Python testing/test.py
                 '''
                  }
             }
