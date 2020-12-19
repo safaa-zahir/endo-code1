@@ -3,11 +3,19 @@ pipeline{
         label'master'
     }
     stages{
-         stage('test'){
+         stage('build'){
             steps{
                 sh '''                                
                  docker build .
                  docker-compose up
+                '''
+                 }
+            }
+
+         stage('test'){
+            steps{
+                sh '''
+                 docker-compose up --build
                 '''
                  }
             }
