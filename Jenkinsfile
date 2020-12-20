@@ -14,7 +14,7 @@ pipeline{
          stage('test'){
             steps{
                 sh '''
-                 Python3 test-http.py
+                 python3 test-http.py
                 '''
                  }
             }
