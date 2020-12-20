@@ -6,8 +6,7 @@ pipeline{
          stage('build'){
             steps{
                 sh '''                                
-                 docker build .
-                 docker-compose up
+                 docker-compose build
                 '''
                  }
             }
@@ -15,7 +14,7 @@ pipeline{
          stage('test'){
             steps{
                 sh '''
-                 Python testing/test.py
+                 Python3 test-http.py
                 '''
                  }
             }
