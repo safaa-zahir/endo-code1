@@ -3,7 +3,7 @@ pipeline {
           label'master'
 	}	
     stages {
-	stage("up1") {
+	stage("http--service") {
 	
 	parallel {
 	 stage("build") {
@@ -13,7 +13,7 @@ pipeline {
 		 '''
 		 }
 			}
-	  stage("up") {
+	  stage("Runing docker-compose") {
 	   steps {
 		 sh '''
 	         docker-compose up
@@ -23,6 +23,7 @@ pipeline {
 	  stage("test") {
 	   steps {
 		sh '''
+                curl --location --request GET 'http://127.0.0.1:8080/helloworld'
 	        python3 test-http.py
 		'''
 				}
