@@ -18,7 +18,7 @@ else :
 
 params3 = {}
 response = request("GET", url+"versionz", params=params3)
-if "Git Hash" in response.json() and "Project Name" in response.json() and response.json().get("Project Name") == "Endocode":
+if "Git Hash" in response.json() and "Project Name" in response.json() and response.json().get("Project Name") == "endocode":
     print("third request passed successfully !")
 else:
-    print("second request not passed !")
+    print("third request not passed !")
