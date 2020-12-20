@@ -3,6 +3,8 @@ pipeline {
           label'master'
 	}	
     stages {
+	stage("up1") {
+	
 	parallel {
 	 stage("build") {
 	  steps {
@@ -26,6 +28,8 @@ pipeline {
 				}
 			}
 		}
-        
+       
 	}
+   }
 }
+    
