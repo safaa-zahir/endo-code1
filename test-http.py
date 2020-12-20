@@ -1,6 +1,6 @@
 from requests import request
 
-url = "http://129.0.0.0:8090/"
+url = "http://0.0.0.0:8080/"
 
 params1 = {}
 response = request("GET", url+"helloworld", params=params1)
