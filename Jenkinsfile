@@ -13,13 +13,6 @@ pipeline {
 		 '''
 		 }
 			}
-	  stage("Runing docker-compose") {
-	   steps {
-		 sh '''
-	         docker-compose up
-                  '''
-			 }
-			}
 	  stage("test") {
 	   steps {
 		sh '''
