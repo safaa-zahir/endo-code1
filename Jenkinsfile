@@ -1,28 +1,35 @@
 pipeline {
     agent {
-          label'master'
+        label'master'
 	}	
     stages {
-	stage("http--service") {
-	
-	parallel {
-	 stage("build") {
-	  steps {
-		 sh '''
-	         docker-compose build
-		 '''
-		 }
-			}
-	  stage("test") {
-	   steps {
-		sh '''
-	        python3 test-http.py
-		'''
-				}
-			}
-		}
-       
-	}
-   }
+        stage("http--service"){
+            parallel{
+                stage("build") {
+                    steps {
+                        sh '''
+                        docker-compose build
+                        '''
+                    }
+                }
+
+                stage("Runing docker-compose") {
+                    steps {
+                        sh '''
+                        docker-compose up -d
+                        '''
+                    }
+                }
+            }
+        }
+        
+        
+        stage("test script") {
+            steps {
+                sh '''
+                python3 test-http.py
+                '''
+            }
+        }
+    }
 }
-    
