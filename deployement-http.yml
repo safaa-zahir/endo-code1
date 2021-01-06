@@ -1,0 +1,12 @@
+apiVersion: app/v1
+kind: Deployement
+metadata:
+  name: endocode
+spec:
+  containers:
+  - name: endo-code1
+    image: safeely/endo-code1_web
+    ports:
+    - containerPort: 80
+  imagePullSecrets:
+  - name: regcred
