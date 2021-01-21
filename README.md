@@ -87,8 +87,8 @@ Ps : In case the port number for Jenkins is 8080 or any port that is already use
 
 After creating a new pipeline, that should be connected to your github repository that has your Jenkinsfile, with all the steps and stages to execute, Your Jenkins can BUILD, TEST and DEPLOY. Click" Build Now " and all should work fine, 
 
-Kubernetes
-===============
+
+
 
 For Kubernetes, we choose Minikube as a cluster Manager, In order to install Kubectl and Minikube cluster we will follow the tutorial https://kubernetes.io/de/docs/tasks/tools/
 
