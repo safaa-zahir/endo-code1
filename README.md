@@ -48,8 +48,8 @@ For testing our endpoints, we can used tools like "Postman", or use simply Curl 
 ```
 
     $ curl --location --request GET 'http://127.0.0.1:8080/versionz'
-    $ curl --location --request POST 'http://127.0.0.1:8080/helloworld'
     $ curl --location --request POST 'http://127.0.0.1:8080/helloworld?name=safaa'
+    $ curl --location --request GET 'http://127.0.0.1:8080/helloworld'
 ```
 Docker
 ===============
